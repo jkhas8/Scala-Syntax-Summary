@@ -88,21 +88,21 @@ myvar_=, unary_+
 
 ###Từ khóa trong Scala
 
-|  |  |  |  |
-|--|--|--|--|
-|Abstract|Case|catch|class|
-|Def|Do|else|extend|
-|False|Final|finally|for|
-|forSome|If|implicit|import|
-|Lazy|Match|new|null|
-|Object|Override|package|private|
-|Protected|Return|sealed|super|
-|This|Throw|trait|try|
-|True|Type|val|var|
-|While|With|yield||
-|-|:|=|=>|
-|<-|<:|<%|>:|
-|#|@|||
+|         |        |        |       |
+|---------|--------|--------|-------|
+|Abstract |Case    |catch   |class  |
+|Def      |Do      |else    |extend |
+|False    |Final   |finally |for    |
+|forSome  |If      |implicit|import |
+|Lazy     |Match   |new     |null   |
+|Object   |Override|package |private|
+|Protected|Return  |sealed  |super  |
+|This     |Throw   |trait   |try    |
+|True     |Type    |val     |var    |
+|While    |With    |yield   |       |
+|-        |:       |=       |=>     |
+|<-       |<:      |<%      |>:     |
+|#        |@       |        |       |
 
 ###Chú thích trong Scala
 
@@ -156,22 +156,22 @@ import scala.collection.immutable.{TreeMap,TreeSet}
 
 #Kiểu dữ liệu trong Scala
 
-|Loại dữ liệu|Mô tả|
-|------------|-----|
-|Byte|8 bit. Trong khoảng từ -128 đến 127|
-|Short|16 bit. Trong khoảng -32768 đến 32767|
-|Int|32 bit. Trong khoảng -2147483648 đến 2147483647|
-|Long|64 bit. Trong khoảng -9223372036854775808 đến 9223372036854775807|
-|Float|32 bit IEEE 754 single-precision float|
-|Double|64 bit IEEE 754 double-precision float|
-|Char|16 bit. Ký tự Unicode. Trong khoảng U+0000 đến U+FFFF|
-|String|Một dãy các Char|
-|Boolean|true/false|
-|Unit|Không có giá trị|
-|Null|Vô hiệu hay rỗng|
-|Nothing|Kiểu phụ của mỗi kiểu dữ liệu khá, bao gồm cả không có giá trị|
-|Any|Tất cả các đối tượng đều là con cháu của kiểu *Any*|
-|AnyRef|Các kiểu tham chiếu đều là con cháu của kiểu *AnyRef*|
+|Loại dữ liệu|Mô tả                                                            |
+|------------|-----------------------------------------------------------------|
+|Byte        |8 bit. Trong khoảng từ -128 đến 127                              |
+|Short       |16 bit. Trong khoảng -32768 đến 32767                            |
+|Int         |32 bit. Trong khoảng -2147483648 đến 2147483647                  |
+|Long        |64 bit. Trong khoảng -9223372036854775808 đến 9223372036854775807|
+|Float       |32 bit IEEE 754 single-precision float                           |
+|Double      |64 bit IEEE 754 double-precision float                           |
+|Char        |16 bit. Ký tự Unicode. Trong khoảng U+0000 đến U+FFFF            |
+|String      |Một dãy các Char                                                 |
+|Boolean     |true/false                                                       |
+|Unit        |Không có giá trị                                                 |
+|Null        |Vô hiệu hay rỗng                                                 |
+|Nothing     |Kiểu phụ của mỗi kiểu dữ liệu khá, bao gồm cả không có giá trị   |
+|Any         |Tất cả các đối tượng đều là con cháu của kiểu *Any*              |
+|AnyRef      |Các kiểu tham chiếu đều là con cháu của kiểu *AnyRef*            |
 
 #Biến trong Scala
 
