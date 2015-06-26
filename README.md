@@ -5,7 +5,7 @@ Nếu bạn đã từng làm quen với Java, thì việc bắt đầu với Sca
 
 #Chương trình đầu tiên trong Scala
 
-Dưới đây là đoạn code đơn giản cho phép in ra cụm từ `Hello, world!`
+Dưới đây là đoạn code đơn giản cho phép in ra cụm từ `Hello, world!`:
 
 ```hello world
 object HelloWorld {
