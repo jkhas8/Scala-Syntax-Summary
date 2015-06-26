@@ -88,21 +88,21 @@ myvar_=, unary_+
 
 ###Từ khóa trong Scala
 
-|         |        |        |     |
-|---------|--------|--------|-----|
-|Abstract |Case    |catch   |class|
-|Def      |Do      |else    |extend|
-|False    |Final   |finally |for|
-|forSome  |If      |implicit|import|
-|Lazy     |Match   |new     |null|
-|Object   |Override|package |private|
-|Protected|Return  |sealed  |super|
-|This     |Throw   |trait   |try|
-|True     |Type    |val     |var|
-|While    |With    |yield   ||
-|-        |:       |=       |=>|
-|<-       |<:      |<%      |>:|
-|#        |@       |        ||
+| | | | |
+|-|-|-|-|
+|Abstract|Case|catch|class|
+|Def|Do|else|extend|
+|False|Final|finally|for|
+|forSome|If|implicit|import|
+|Lazy|Match|new|null|
+|Object|Override|package|private|
+|Protected|Return|sealed|super|
+|This|Throw|trait|try|
+|True|Type|val|var|
+|While|With|yield||
+|-|:|=|=>|
+|<-|<:|<%|>:|
+|#|@|||
 
 ###Chú thích trong Scala
 
@@ -157,6 +157,7 @@ import scala.collection.immutable.{TreeMap,TreeSet}
 #Kiểu dữ liệu trong Scala
 
 |Loại dữ liệu|Mô tả|
+|-|-|
 |Byte|8 bit. Trong khoảng từ -128 đến 127|
 |Short|16 bit. Trong khoảng -32768 đến 32767|
 |Int|32 bit. Trong khoảng -2147483648 đến 2147483647|
