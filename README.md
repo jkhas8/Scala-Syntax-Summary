@@ -80,7 +80,7 @@ myvar_=, unary_+
 
 ###Định danh chữ
 
-Định danh chữ là một chuỗi tùy ý được chứa trong `(\`...\`)`. Ví dụ:
+Định danh chữ là một chuỗi tùy ý được chứa trong `(/`.../`)`. Ví dụ:
 
 ```
 `x` `<clinit>` `yield`
@@ -622,7 +622,7 @@ Value of a: 7
 
 #Hàm trong Scala
 
-**Cách khai báo**
+##Cách khai báo
 
 ```
 def functionName ([list of parameters]) : [return type]
@@ -640,7 +640,7 @@ object add {
 }
 ```
 
-**Cách gọi hàm**
+##Cách gọi hàm
 
 ```
 functionName( list of parameters )
@@ -661,3 +661,155 @@ object Test {
   }
 }
 ```
+
+Kết quả:
+
+```
+> scalac Test.scala
+> scala Test
+Returned value : 12
+```
+
+### Hàm được gọi bởi tên
+
+Thông thường các tham số của một hàm thường là các tham số giá trị tương
+tự như hàm `addInt( a:Int, b:Int )` của ví dụ trên. Tuy nhiên, Scala có
+thể cho phép gọi một hàm như là một tham số. Ví dụ:
+
+```
+object Test {
+  def main(args: Array[String] {
+    delayed(time());
+  }
+
+  def time() = {
+    println("Getting time in nano second")
+    System.nanoTime
+  }
+
+  def delayed( t: => Long ) = {
+    println("In delayed method")
+    println("Param: " + t)
+    t
+  }
+}
+```
+
+Kết quả:
+
+```
+> scalac Test.scala
+> scala Test
+In delayed method
+Getting time in nano second
+Param: 81303808765843
+Getting time in nano second
+```
+
+### Hàm với tham số là biến số
+
+Scala cho phép tham số cuối cùng của một hàm được lặp lại. Việc này cho
+phép thông qua sự thay đổi của số lượng tham số trong hàm. Ví dụ:
+
+```
+object Test {
+  def main(args: Array[String]) {
+    printString("Hello", "Scala", "Java");
+  }
+
+  def printString( args:String* ) = {
+    var i : Int = 0;
+    for( arg <- args ) {
+      println("Arg value[" + i + "] = " + arg );
+      i = i + 1;
+    }
+  }
+}
+```
+
+Kết quả:
+
+```
+> scalac Test.scala
+> scala Test
+Arg value[0] = Hello
+Arg value[1] = Scala
+Arg value[2] = Java
+```
+
+### Hàm đệ quy
+
+Scala hỗ trợ đệ quy khá tốt. Ví dụ:
+
+```
+object Test {
+  def main(args: Array[String]) {
+    for (i <- 1 to 10)
+      println( "Factorial of " + i + ": = " + factorial(i) )
+  }
+
+  def factorial(n: BigInt): BigInt = {
+    if (n <= 1)
+      1
+    else
+      n * factorial(n - 1)
+  }
+}
+```
+
+Kết quả:
+```
+> scalac Test.scala
+> scala Test
+Factorial of 1: = 1
+Factorial of 2: = 2
+Factorial of 3: = 6
+Factorial of 4: = 24
+Factorial of 5: = 120
+Factorial of 6: = 720
+Factorial of 7: = 5040
+Factorial of 8: = 40320
+Factorial of 9: = 362800
+Factorial of 10: = 3628000
+```
+
+### Hàm lồng nhau
+
+Scala cho phép hàm được khai báo bên trong một hàm khác. Các hàm được
+lông bên trong này có thể được gọi trong hàm chả của nó. Ví dụ:
+
+```
+object Test {
+  def main(args: Array[String]) {
+    println( factorial(0) )
+    println( factorial(1) )
+    println( factorial(2) )
+    println( factorial(3) )
+  }
+
+  def factorial(i: Int): Int = {
+    def fact(i: Int, accumulator: Int): Int = {
+      if (i <= 1)
+        accumulator
+      else
+        fact(i - 1, i * accumulator)
+    }
+    fact(i, 1)
+  }
+}
+```
+
+Kết quả:
+
+```
+> scalac Test.scala
+> scala Test
+1
+1
+2
+6
+```
+
+### Hàm nặc danh
+
+
