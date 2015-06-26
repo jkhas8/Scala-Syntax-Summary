@@ -88,8 +88,8 @@ myvar_=, unary_+
 
 ###Từ khóa trong Scala
 
-|Abstract |Case    |catch   |class  |
 |---------|--------|--------|-------|
+|Abstract |Case    |catch   |class  |
 |Def      |Do      |else    |extend |
 |False    |Final   |finally |for    |
 |forSome  |If      |implicit|import |
