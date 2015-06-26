@@ -7,7 +7,7 @@ Nếu bạn đã từng làm quen với Java, thì việc bắt đầu với Sca
 
 Dưới đây là đoạn code đơn giản cho phép in ra cụm từ `Hello, world!`:
 
-```hello world
+```
 object HelloWorld {
   def main(args: Array[String]) {
     println("Hello, world!") // in ra Hello, world!
