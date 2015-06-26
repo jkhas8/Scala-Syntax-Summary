@@ -88,19 +88,19 @@ myvar_=, unary_+
 
 ###Từ khóa trong Scala
 
-|Abstract|Case|catch|class|
-|Def|Do|else|extend|
-|False|Final|finally|for|
-|forSome|If|implicit|import|
-|Lazy|Match|new|null|
-|Object|Override|package|private|
-|Protected|Return|sealed|super|
-|This|Throw|trait|try|
-|True|Type|val|var|
-|While|With|yield||
-|-|:|=|=>|
-|<-|<:|<%|>:|
-|#|@|||
+|Abstract |Case    |catch   |class  |
+|Def      |Do      |else    |extend |
+|False    |Final   |finally |for    |
+|forSome  |If      |implicit|import |
+|Lazy     |Match   |new     |null   |
+|Object   |Override|package |private|
+|Protected|Return  |sealed  |super  |
+|This     |Throw   |trait   |try    |
+|True     |Type    |val     |var    |
+|While    |With    |yield   |       |
+|-        |:       |=       |=>     |
+|<-       |<:      |<%      |>:     |
+|#        |@       |        |       |
 
 ###Chú thích trong Scala
 
