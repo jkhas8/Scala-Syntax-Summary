@@ -813,3 +813,110 @@ Kết quả:
 ### Hàm nặc danh
 
 
+Scala cho phép khai báo hàm được khởi tạo như một biến giá trị. Ví dụ:
+
+```
+var inc = (x: Int) => x+1 // Hàm tạo số liền sau một số nguyên
+var mul = (x: Int, y: Int) => x*y // Hàm chứa nhiều tham số đầu vào
+var userDir = () => { System.getProperty("user.dir") } // Hàm không chứa tham số đầu vào 
+```
+
+Các hàm này có thể dùng một cách thông thường. Ví dụ:
+
+```
+var x = inc(7) - 1
+println(mul(3,4))
+println(userDir)
+```
+
+# Lớp và đối tượng trong Scala
+
+Để dễ dàng nắm bắt cú pháp khai báo lớp trong Scala, chúng ta cùng xem ví dụ đơn giản sau:
+
+```
+import java.io._
+
+class Point(xc: Int, yc: Int) {
+  var x: Int = xc
+  var y: Int = yc
+
+  def move(dx: Int, dy: Int) {
+    x = x + dx
+    y = y + dy
+    println ("Point x location: " + x);
+    println ("Point y location: " + y);
+  }
+}
+
+object Test {
+  def main(args: Array[String]) {
+    val pt = new Point(10, 20);
+    pt.move(10, 10);
+  }
+}
+```  
+
+Kết quả:
+
+```
+> scalac Test.scala
+> scala Test
+Point x location: 20
+Point y location: 30 
+```
+
+## Lớp mở rộng (extending)
+
+Scala cho phép mở rộng một lớp tương tự như trên Java. Tuy nhiên có 2 hạn chế: các phương thức bắt buộc phải có từ khóa **override** và chỉ hàm tạo sơ cấp mới có thể truyền tham số tới hàm tạo cơ sở. Ví dụ:
+
+```
+import java.io._
+
+class Point(val xc: Int, val yc: Int) {
+  var x: Int = xc
+  var y: Int = yc
+  def move(dx: Int, dy: Int) {
+    x = x + dx
+    y = y + dy
+    println ("Point x location : " + x);
+    println ("Point y location : " + y);
+  }
+}
+
+class Location(override val xc: Int, override val yc: Int,
+  val zc :Int) extends Point(xc, yc){
+  var z: Int = zc
+
+  def move(dx: Int, dy: Int, dz: Int) {
+    x = x + dx
+    y = y + dy
+    z = z + dz
+    println ("Point x location : " + x);
+    println ("Point y location : " + y);
+    println ("Point z location : " + z);
+  }
+}
+
+object Test {
+  def main(args: Array[String]) {
+    val loc = new Location(10, 20, 15);
+
+    // Move to a new location
+    loc.move(10, 10, 5);
+  }
+}
+```
+
+Kết quả:
+
+```
+> scalac Test.scala
+> scala Test
+Point x location : 20
+Point y location : 30
+Point z location : 20
+```
+
+# Tài liệu tham khảo
+
+- http://www.tutorialspoint.com/scala/scala_arrays.htm
