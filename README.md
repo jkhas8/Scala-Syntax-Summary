@@ -80,7 +80,7 @@ myvar_=, unary_+
 
 ###Định danh chữ
 
-Định danh chữ là một chuỗi tùy ý được chứa trong `(/`.../`)`. Ví dụ:
+Định danh chữ là một chuỗi tùy ý được chứa trong ``(`...`)``. Ví dụ:
 
 ```
 `x` `<clinit>` `yield`
